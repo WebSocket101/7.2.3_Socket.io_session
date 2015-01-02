@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Login
+  form(action="/login",method="POST")
+    input(type="text", placeholder="Benutzername",name="username")
+    br
+    input(type="password", placeholder="Passwort",name="password")
+    br
+    input(type="submit",value="Login")
+  script.
+    var socket = io.connect();
+     socket.on("connect",function(){
+     socket.send("WebSocket aufgebaut");
+    })
+    socket.on("message",function(message){
+     console.log(message);
+    });
+     socket.on("error", function(message){
+     console.log(message);
+    })

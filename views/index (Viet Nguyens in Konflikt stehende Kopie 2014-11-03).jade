@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Willkommen auf der Seite #{title}
+  script.
+    var socket = io.connect();
+     socket.on("connect",function(){
+     socket.send("Websocket aufgebaut");
+    })
+    socket.on("message",function(message){
+     console.log(message);
+    });
+    socket.on("error", function(message){
+     console.log(message);
+    })
