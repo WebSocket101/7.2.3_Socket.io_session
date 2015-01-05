@@ -1,5 +1,5 @@
 # Socket.io session
-Example web application demonstrating a cookie- and session-based WebSocket authentication and access control implemented with Express.js and Socket.io
+Example web application demonstrating a cookie- and session-based WebSocket authentication as well as access control implemented with Express.js and Socket.io
 
 # Dependencies
 Node.js: http://nodejs.org/
